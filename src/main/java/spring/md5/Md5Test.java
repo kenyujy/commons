@@ -8,7 +8,6 @@ import java.security.SecureRandom;
 
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
-import org.apache.commons.codec.digest.DigestUtils;
 
 
 public class Md5Test {
