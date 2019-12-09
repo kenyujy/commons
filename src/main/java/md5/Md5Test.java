@@ -1,4 +1,4 @@
-package spring.md5;
+package md5;
 
 import java.math.BigInteger;
 import java.nio.charset.Charset;
@@ -24,6 +24,7 @@ public class Md5Test {
 	   
 	   //String Url = "ILoveJava";
 	   //System.out.println( DigestUtils.md5Hex(Url));
+	   //DigestUtils.
    }
    
    public static String md5Hash(String str) {

@@ -6,6 +6,7 @@ import java.util.Properties;
 public class SingletonTest2 {
 	// 静态常量 类一加载直接创建，外部可以以 SingletonTest.instance 访问
 	public static final SingletonTest2 instance;
+
 	static {
 		Properties pro= new Properties();
 		try {
@@ -21,5 +22,5 @@ public class SingletonTest2 {
 	
 	private SingletonTest2() {
 		
-	};
+	}
 }
