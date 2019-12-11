@@ -15,7 +15,7 @@ public class IOdemo {
         ServerSocket serverSocket= new ServerSocket(8888);
 
         while (true) { //死循环等待 socket连接
-            Socket socket = serverSocket.accept(); //服务端ServerSocket 等待连接, 一旦有新连接就把socket 交给线程池
+            Socket socket = serverSocket.accept(); //服务端ServerSocket 等待连接, 一旦有新连接就返回socket 交给线程池
             System.out.println("有客户端连接上");  //telnet localhost 8888 , ctrl+] send abc
             threadPool.execute(()->
                     new MySocketHandler(socket).run()); //把线程上下文socket传递进去
@@ -39,7 +39,7 @@ class MySocketHandler implements Runnable{
                 byte[] b = new byte[1024];
                 int data = inputStream.read(b);  //阻塞等待读取
                 if (data != -1) {
-                    String info = new String(b, 0, data, "UTF-8");
+                    String info = new String( b, 0, data, "UTF-8");
                     System.out.println(info);
                 }
             } catch (IOException e) {
